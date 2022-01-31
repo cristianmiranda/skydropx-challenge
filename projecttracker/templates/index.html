@@ -1,0 +1,91 @@
+{% extends "default.html" %}
+
+{% block title %}
+    {% if filtered_team %}
+        👷 {{filtered_team.name}} ({{amount_of_projects}})
+    {% else %}
+        🧐 Project Tracker
+    {% endif %}
+{% endblock %}
+
+{% block subtitle %}
+    {% if filtered_team %}
+        {{filtered_team.description}}
+    {% else %}
+        Administración de equipos y proyectos
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if filtered_team %}
+        <h4 class="title is-4">{{ filtered_team.name }}</h2>
+        <table class="table">
+            <thead>
+                <th>Nick</th>
+                <th>Descripción</th>
+                <th>Empleados</th>
+            </thead>
+            <tr>
+                <td>{{ filtered_team.nick }}</td>
+                <td>{{ filtered_team.description }}</td>
+                <td>{{ filtered_team_employees }}</td>
+            </tr>
+        </table>
+        <br>
+    {% endif %}
+    {% if projects %}
+        <h4 class="title is-4">Contribuciones</h2>
+        <table class="table">
+            <thead>
+                <th>Fecha</th>
+                {% if not filtered_team %}<th>Equipo</th>{% endif %}
+                <th>Líder</th>
+                <th>Notas</th>
+            </thead>
+            {% for project in projects %}
+                <tr>
+                    <td>{{project.datetime|date:"M d, Y"}}</td>
+                    {% if not filtered_team %}<td>{{project.team.name}}</td>{%endif %}
+                    <td class="contributions">
+                        ⭐ {{ project.leader }}
+                    </td>
+                    <td>{{project.notes}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{% url 'admin:projecttracker_project_add'%}{% if filtered_name%}?team={{filtered_team.pk}}{%endif%}">
+            Agregar nuevo proyecto a {%if filtered_team%}{{filtered_team.name}}{%else%}Equipo{%endif%}.
+        </a>
+        <br>
+        {% if filtered_team %}<br><a href="/">Reiniciar filtros.</a>{% endif %}
+    {% else %}
+        {% if error %}
+            <div class="notification is-danger is-dark">
+                {{error}}. <a href="{% url 'admin:projecttracker_project_add'%}?name={{team_name}}">Agregar Equipo.</a>
+            </div>
+        {% else %}
+            {% if teams %}
+                No hay proyectos
+                {% if filtered_team %}
+                    para el equipo {{filtered_team.name}}
+                {%endif%}.
+                <a href="{% url 'admin:projecttracker_project_add'%}{% if filtered_name%}?team={{filtered_team.pk}}{%endif%}">Agregar uno.</a>
+            {% else %}
+                <article class="message is-info">
+                  <div class="message-header">
+                    <p>Ups!</p>
+                    <button class="delete" aria-label="delete"></button>
+                  </div>
+                  <div class="message-body">
+                    No pudimos encontrar Equipos en la base de datos. Para poder gestionar proyectos debes crear un equipo y empleados.
+                    <br>
+                    <br>
+                    <a href="{% url 'admin:projecttracker_team_add'%}">Agregar uno.</a>
+                  </div>
+                </article>
+            {% endif %}
+        {% endif %}
+        <br>
+    {% endif %}
+{% endblock %}

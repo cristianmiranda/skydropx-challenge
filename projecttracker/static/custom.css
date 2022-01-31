@@ -1,0 +1,20 @@
+html,
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+body > footer {
+    margin-top: auto;
+}
+
+.contributions { 
+    text-align: center !important;
+}
+.contributions.not-employee { 
+    background: grey;
+}
+
+.panel-block.is-active { 
+    font-weight: bold;
+}
