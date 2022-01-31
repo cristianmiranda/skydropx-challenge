@@ -11,5 +11,8 @@ django-storages[google]==1.11.1
 django-environ==0.4.5
 pytest==6.2.5
 pytest-django==4.5.2
+selenium==4.1.0
+behave_django==1.4.0
+behave==1.2.6
 
 # django-debug-toolbar
