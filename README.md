@@ -140,7 +140,11 @@ cp .env.local .env
 docker-compose up db
 ```
 ```bash
+# Unit tests
 pytest
+
+# BDD integration tests
+python manage.py behave
 ```
 
 ### 🔹 DB remota
@@ -148,7 +152,11 @@ pytest
 cloud_sql_proxy -instances=${PROJECT_ID}:us-central1:projecttracker=tcp:0.0.0.0:5432
 ```
 ```bash
+# Unit tests
 USE_CLOUD_SQL_AUTH_PROXY=true pytest
+
+# BDD integration tests
+USE_CLOUD_SQL_AUTH_PROXY=true python manage.py behave
 ```
 
 ## ♻️ Modificaciones
