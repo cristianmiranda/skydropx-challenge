@@ -10,6 +10,17 @@ admin_password = bhwaXVDITBYiZRNdcADe4th29VL6oFSy
 
 https://user-images.githubusercontent.com/972572/152010870-98f6b9e7-2038-478b-b304-5a523f63c1f2.mov
 
+### Índice
+- [🧐 Project Tracker](https://github.com/cristianmiranda/skydropx-challenge#-project-tracker)
+  * [☁️ Cloud Provisioning y Deployment](https://github.com/cristianmiranda/skydropx-challenge#%EF%B8%8F-cloud-provisioning-y-deployment)
+  * [🐋 Despliegue local con Docker](https://github.com/cristianmiranda/skydropx-challenge#-despliegue-local-con-docker)
+  * [🖥️ Desarrollo en ambiente local](https://github.com/cristianmiranda/skydropx-challenge#%EF%B8%8F-desarrollo-en-ambiente-local)
+    + [🔹 DB local](https://github.com/cristianmiranda/skydropx-challenge#-db-local)
+    + [🔹 DB remota](https://github.com/cristianmiranda/skydropx-challenge#-db-remota)
+  * [🧪 Tests](https://github.com/cristianmiranda/skydropx-challenge#-tests)
+    + [🔹 DB local](https://github.com/cristianmiranda/skydropx-challenge#-db-local-1)
+    + [🔹 DB remota](https://github.com/cristianmiranda/skydropx-challenge#-db-remota-1)
+  * [♻️ Modificaciones](https://github.com/cristianmiranda/skydropx-challenge#%EF%B8%8F-modificaciones)
 
 ## ☁️ Cloud Provisioning y Deployment
 
