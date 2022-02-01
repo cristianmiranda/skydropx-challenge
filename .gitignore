@@ -17,3 +17,7 @@ venv
 
 # Sensitive data
 *.tfvars
+
+# Coverage reports
+.coverage
+coverage.xml
