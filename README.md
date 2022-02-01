@@ -1,6 +1,6 @@
 # 🧐 Project Tracker
 
-![ci](https://github.com/cristianmiranda/skydropx-challenge/actions/workflows/ci.yml/badge.svg)
+![ci](https://github.com/cristianmiranda/skydropx-challenge/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/cristianmiranda/skydropx-challenge/branch/master/graph/badge.svg)](https://codecov.io/gh/cristianmiranda/skydropx-challenge)
 
 🔗 https://projecttracker-ie2endhizq-uc.a.run.app
 ```bash
