@@ -8,6 +8,9 @@ admin_username = admin
 admin_password = bhwaXVDITBYiZRNdcADe4th29VL6oFSy
 ```
 
+https://user-images.githubusercontent.com/972572/152010870-98f6b9e7-2038-478b-b304-5a523f63c1f2.mov
+
+
 ## ☁️ Cloud Provisioning y Deployment
 
 1. Configurar proyecto de GCP
