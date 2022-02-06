@@ -2,8 +2,6 @@
 
 ![ci](https://github.com/cristianmiranda/skydropx-challenge/actions/workflows/ci.yml/badge.svg) ![Website](https://img.shields.io/website?down_message=offline&label=webapp&logo=google-cloud&up_message=online&url=https%3A%2F%2Fprojecttracker-ie2endhizq-uc.a.run.app) [![codecov](https://codecov.io/gh/cristianmiranda/skydropx-challenge/branch/master/graph/badge.svg)](https://codecov.io/gh/cristianmiranda/skydropx-challenge)
 
-🗒️ [Challenge guidelines](https://dev-challenges.skydropx.com/DevOps_engineer/challenge)
-
 🔗 https://projecttracker-ie2endhizq-uc.a.run.app
 ```bash
 admin_username = admin
@@ -193,5 +191,3 @@ gcloud builds submit --config cloudbuild-full.yaml
 ---
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-
-#### Skydropx Python Challenge 2022
